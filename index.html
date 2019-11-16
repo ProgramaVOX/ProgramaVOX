@@ -39,8 +39,10 @@
     var urlbase="https://programavox.github.io/ProgramaVOX/";    
 
     function pintaEtiqueta(etiqueta) {
-      $("menu-voxetiquetas").html('<a href="">'+etiqueta+'</a>');
+      $("#menu-voxetiquetas").append('<a href="">'+etiqueta+'</a>');
     }
+
+    //function descargar
 
     $.ajax({url: urlbase+"data/fascismo.md", dataType: 'text'})
       .done(function(intro) {
@@ -49,11 +51,13 @@
 
     $.ajax({url: urlbase+"data/programa.txt", dataType: 'text'})
       .done(function(programa) {
+
         programa=programa.split('\n');
+        programa.shift();
         var alletiquetas = [];
 
-        programa.forEach(function(medida) {
-          var medida = medida.split(',');
+        $.each( programa, function( index, medida ){
+          var medida = medida.split('\t');
           if (medida.length == 4) {
 
             var num = medida[0]
@@ -61,14 +65,17 @@
               , texto = medida[2]
               , etiquetas = medida[3].split(';');
 
-              etiquetas.forEach(function(etiqueta) {
-                if (!alletiquetas.includes(etiqueta)) alletiquetas.push(etiqueta);
+              $.each( etiquetas, function( index, etiqueta ) {
+console.log(etiqueta);
+                if (!(alletiquetas.includes(etiqueta))) alletiquetas.push(etiqueta);
+                //alletiquetas.push(etiqueta);
               });
 
           }
         });
 
-        alletiquetas.forEach(function(etiqueta) {
+        alletiquetas=Array.from(new Set(alletiquetas));
+        $.each( alletiquetas, function( index, etiqueta ){
           pintaEtiqueta(etiqueta);
         });
 

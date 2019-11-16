@@ -1,5 +1,5 @@
-número,idprograma,texto,etiquetas
-9,generales2018,"Derogación inmediata de la Ley de Memoria Histórica. Ningún parlamento está legitimado para definir nuestro pasado, y menos excluyendo a los españoles que difieren de sus definiciones. No puede utilizarse el pasado para dividirnos, al contrario, hay que homenajear conjuntamente a todos los que, desde perspectivas históricas diferentes, lucharon por España.",franquismo
-14,generales2018,Deportación de los inmigrantes ilegales a sus países de origen.,fascismo
-36,generales2018,Fusión de ayuntamientos y significativa reducción en el número de representantes locales. Reducir al mínimo el número de asesores contratados por las diferentes administraciones públicas potenciando de esta manera la carrera profesional de los empleados públicos.,neoliberalismo
-40,generales2018,Reducir el tipo general del Impuesto sobre Sociedades al 20% con una reducción del 5% en el caso que los beneficios no se distribuyan y se mantengan en la empresa como reservas.,neoliberalismo
+número	idprograma	texto	etiquetas
+9	generales2018	Derogación inmediata de la Ley de Memoria Histórica. Ningún parlamento está legitimado para definir nuestro pasado, y menos excluyendo a los españoles que difieren de sus definiciones. No puede utilizarse el pasado para dividirnos, al contrario, hay que homenajear conjuntamente a todos los que, desde perspectivas históricas diferentes, lucharon por España.	franquismo
+14	generales2018	Deportación de los inmigrantes ilegales a sus países de origen.	fascismo
+36	generales2018	Fusión de ayuntamientos y significativa reducción en el número de representantes locales. Reducir al mínimo el número de asesores contratados por las diferentes administraciones públicas potenciando de esta manera la carrera profesional de los empleados públicos.	neoliberalismo
+40	generales2018	Reducir el tipo general del Impuesto sobre Sociedades al 20% con una reducción del 5% en el caso que los beneficios no se distribuyan y se mantengan en la empresa como reservas.	neoliberalismo
