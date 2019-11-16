@@ -38,9 +38,40 @@
 
     var urlbase="https://programavox.github.io/ProgramaVOX/";    
 
+    function pintaEtiqueta(etiqueta) {
+      $("menu-voxetiquetas").html('<a href="">'+etiqueta+'</a>');
+    }
+
     $.ajax({url: urlbase+"data/fascismo.md", dataType: 'text'})
       .done(function(intro) {
         $('#info-voxetiqueta').html(marked(intro));
+    });
+
+    $.ajax({url: urlbase+"data/programa.csv", dataType: 'text'})
+      .done(function(programa) {
+        programa=programa.split('\n');
+        var alletiquetas = [];
+
+        programa.forEach(function(medida) {
+          var medida = medida.split(',');
+          if (medida.length == 4) {
+
+            var num = medida[0]
+              , idprograma = medida[1]
+              , texto = medida[2]
+              , etiquetas = medida[3].split(';');
+
+              etiquetas.forEach(function(etiqueta) {
+                if (!alletiquetas.includes(etiqueta)) alletiquetas.push(etiqueta);
+              });
+
+          }
+        });
+
+        alletiquetas.forEach(function(etiqueta) {
+          pintaEtiqueta(etiqueta);
+        });
+
     });
 
   });
