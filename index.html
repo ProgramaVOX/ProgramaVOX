@@ -47,7 +47,7 @@
         $('#info-voxetiqueta').html(marked(intro));
     });
 
-    $.ajax({url: urlbase+"data/programa.csv", dataType: 'text'})
+    $.ajax({url: urlbase+"data/programa.txt", dataType: 'text'})
       .done(function(programa) {
         programa=programa.split('\n');
         var alletiquetas = [];
